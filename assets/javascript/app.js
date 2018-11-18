@@ -14,29 +14,29 @@ $(document).ready(function(){
             let results = response.data.memes;
             console.log(results);
 
-            //loops through array
+            //loops through array of meme results returned from imgFlip API
             for (var i = 0; i < results.length; i++) {
 
-                //create div to house images, add classes
+                //create div to house images, add Bootstrap class to render horizontally, set class for possible later use
                 let imageDiv = $("<div>");
                 imageDiv.addClass("d-inline-block iDiv");
 
-                //create image tags, adds necessary attributes to each image
+                //create image tags, adds necessary all attributes to each image
                 let memeImage = $("<img>");
                 memeImage.attr("id", results[i].id);
                 memeImage.attr("name", results[i].name);
                 memeImage.attr("src", results[i].url);
 
-                //set image widths to be uniform
+                //create attributes to set image widths to be uniform
                 memeImage.attr("width", "350");
                 memeImage.attr("height", "200");
 
                 //add class in case we need for CSS later
                 memeImage.addClass("memeImage");
 
-                //append images to div
+                //append images to parent div
                 imageDiv.append(memeImage);
-                
+
                 //display in html
                 $("#memeDisplay").append(imageDiv);
                     
