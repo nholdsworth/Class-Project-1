@@ -21,13 +21,13 @@ $(document).ready(function(){
                 let imageDiv = $("<div>");
                 imageDiv.addClass("d-inline-block iDiv");
 
-                //create image tags, adds necessary all attributes to each image
+                //create image tags, adds all attributes to each image
                 let memeImage = $("<img>");
                 memeImage.attr("id", results[i].id);
                 memeImage.attr("name", results[i].name);
                 memeImage.attr("src", results[i].url);
 
-                //create attributes to set image widths to be uniform
+                //create attributes to set image sizes to be uniform
                 memeImage.attr("width", "350");
                 memeImage.attr("height", "200");
 
